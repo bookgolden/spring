@@ -10,6 +10,7 @@
 		<module>srping-mvc</module>
 		<module>spring-boot</module>
 		<module>spring-cloud</module>
+		<module>sping-context</module>
 	</modules>
 
 </project>
