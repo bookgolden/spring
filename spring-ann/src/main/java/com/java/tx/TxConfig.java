@@ -56,7 +56,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * 			
  */
 @EnableTransactionManagement
-@ComponentScan("com.atguigu.tx")
+@ComponentScan("com.java.tx")
 @Configuration
 public class TxConfig {
 	
