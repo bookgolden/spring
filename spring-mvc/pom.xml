@@ -5,5 +5,6 @@
     <artifactId>spring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>sping-context</artifactId>
+  <groupId>com.java.mvc</groupId>
+  <artifactId>spring-mvc</artifactId>
 </project>

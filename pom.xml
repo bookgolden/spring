@@ -7,11 +7,10 @@
     <packaging>pom</packaging>
 
 	<modules>
-		<module>srping-mvc</module>
 		<module>spring-boot</module>
 		<module>spring-cloud</module>
-		<module>sping-context</module>
 		<module>spring-ann</module>
+		<module>spring-mvc</module>
 	</modules>
 
 </project>
