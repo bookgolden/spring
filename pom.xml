@@ -11,6 +11,7 @@
 		<module>spring-boot</module>
 		<module>spring-cloud</module>
 		<module>spring-ann</module>
+		<module>springmvc-ann</module>
 		<module>spring-mvc</module>
 	</modules>
 
