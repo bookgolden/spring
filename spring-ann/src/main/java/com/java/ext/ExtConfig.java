@@ -98,7 +98,7 @@ import com.java.bean.Blue;
  * 
  *
  */
-@ComponentScan("com.atguigu.ext")
+@ComponentScan("com.java.ext")
 @Configuration
 public class ExtConfig {
 	

@@ -11,8 +11,8 @@
 
 	<context:property-placeholder location="classpath:person.properties"/>
 	<!-- 包扫描、只要标注了@Controller、@Service、@Repository，@Component -->
-	 <!-- <context:component-scan base-package="com.atguigu" use-default-filters="false"></context:component-scan> -->
-	<bean id="person" class="com.atguigu.bean.Person"  scope="prototype" >
+	 <!-- <context:component-scan base-package="com.java" use-default-filters="false"></context:component-scan> -->
+	<bean id="person" class="com.java.bean.Person"  scope="prototype" >
 		<property name="age" value="${}"></property>
 		<property name="name" value="zhangsan"></property>
 	</bean>

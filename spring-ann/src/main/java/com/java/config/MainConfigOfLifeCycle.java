@@ -57,7 +57,7 @@ import com.java.bean.Car;
  * @author lfy
  *
  */
-@ComponentScan("com.atguigu.bean")
+@ComponentScan("com.java.bean")
 @Configuration
 public class MainConfigOfLifeCycle {
 	

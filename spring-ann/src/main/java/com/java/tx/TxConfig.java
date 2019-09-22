@@ -20,7 +20,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * 		数据源、数据库驱动、Spring-jdbc模块
  * 2、配置数据源、JdbcTemplate（Spring提供的简化数据库操作的工具）操作数据
  * 3、给方法上标注 @Transactional 表示当前方法是一个事务方法；
- * 4、 @EnableTransactionManagement 开启基于注解的事务管理功能；
+ * 4、@EnableTransactionManagement 开启基于注解的事务管理功能；
  * 		@EnableXXX
  * 5、配置事务管理器来控制事务;
  * 		@Bean
@@ -59,7 +59,6 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @ComponentScan("com.java.tx")
 @Configuration
 public class TxConfig {
-	
 	//数据源
 	@Bean
 	public DataSource dataSource() throws Exception{
@@ -84,6 +83,5 @@ public class TxConfig {
 	public PlatformTransactionManager transactionManager() throws Exception{
 		return new DataSourceTransactionManager(dataSource());
 	}
-	
 
 }

@@ -53,8 +53,8 @@ import com.java.dao.BookDao;
  *
  */
 @Configuration
-@ComponentScan({"com.atguigu.service","com.atguigu.dao",
-	"com.atguigu.controller","com.atguigu.bean"})
+@ComponentScan({"com.java.service","com.java.dao",
+	"com.java.controller","com.java.bean"})
 public class MainConifgOfAutowired {
 
 	@Primary
