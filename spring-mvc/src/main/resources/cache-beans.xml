@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context-3.0.xsd
+          http://www.springframework.org/schema/aop
+          http://www.springframework.org/schema/aop/spring-aop-3.1.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
+	   default-lazy-init="false" default-autowire="byName">
+
+	<bean id="configList" class="com.jd.jr.cf.data.cache.client.bean.ConfigList">
+		<property name="cacheConfig">
+			<list>
+				<ref bean="applicationInfo"/>
+<!--				<ref bean="cfSkuAttributeConfig"/>-->
+<!--				<ref bean="applicationInfoVoConfig"/>-->
+<!--				<ref bean="pinRoleConfig"/>-->
+			</list>
+		</property>
+	</bean>
+	<bean id="applicationInfo" class="com.jd.jr.cf.data.cache.client.config.CacheConfig">
+		<property name="objName" value="cf_application_info"></property>
+		<property name="className" value="com.jd.jr.cf.data.cache.server.api.vo.ApplicationInfoVo"></property>
+		<property name="fieldBeans">
+			<list>
+				<ref bean="idNoField"></ref>
+<!--				<ref bean="businessTypeField"></ref>-->
+				<ref bean="merchantCodeField"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="idNoField" class="com.jd.jr.cf.data.cache.client.config.FieldBean">
+		<property name="field" value="idNo"></property>
+	</bean>
+	<bean id="merchantCodeField" class="com.jd.jr.cf.data.cache.client.config.FieldBean">
+		<property name="field" value="merchantCode"></property>
+	</bean>
+	<bean id="businessTypeField" class="com.jd.jr.cf.data.cache.client.config.FieldBean">
+		<property name="field" value="businessType"></property>
+		<property name="values">
+			<list>
+				<value>BIZCD</value>
+				<value>HEALTH</value>
+				<value>FDD</value>
+			</list>
+		</property>
+	</bean>
+
+<!--	<bean id="cfSkuAttributeConfig" class="com.jd.jr.cf.data.cache.client.config.CacheConfig">-->
+<!--		<property name="objName" value="cf_sku_attribute"></property>-->
+<!--		<property name="className" value="com.jd.jr.cf.data.cache.server.api.vo.SkuAttributeVo"></property>-->
+<!--		<property name="fieldNameList">-->
+<!--			<list>-->
+<!--				<value>id</value>-->
+<!--				<value>attributeId</value>-->
+<!--				<value>skuId</value>-->
+<!--				<value>valueId</value>-->
+<!--				<value>valueName</value>-->
+<!--			</list>-->
+<!--		</property>-->
+<!--	</bean>-->
+<!--	<bean id="applicationInfoVoConfig" class="com.jd.jr.cf.data.cache.client.config.CacheConfig">-->
+<!--		<property name="objName" value="cf_application_info"></property>-->
+<!--		<property name="className" value="com.jd.jr.cf.data.cache.server.api.vo.ApplicationInfoVo"></property>-->
+<!--		<property name="fieldNameList">-->
+<!--			<list>-->
+<!--				<value>businessType</value>-->
+<!--				<value>applyNum</value>-->
+<!--				<value>merchantCode</value>-->
+<!--			</list>-->
+<!--		</property>-->
+<!--	</bean>-->
+<!--	<bean id="pinRoleConfig" class="com.jd.jr.cf.data.cache.client.config.CacheConfig">-->
+<!--		<property name="objName" value="cf_pin_role"></property>-->
+<!--		<property name="className" value="com.jd.jr.cf.data.cache.server.api.vo.PinRole"></property>-->
+<!--		<property name="fieldNameList">-->
+<!--			<list>-->
+<!--				<value>id</value>-->
+<!--				<value>pin</value>-->
+<!--				<value>roleId</value>-->
+<!--			</list>-->
+<!--		</property>-->
+<!--	</bean>-->
+
+</beans>
