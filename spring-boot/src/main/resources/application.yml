@@ -13,4 +13,16 @@ spring:
       repositories:
         enabled: true
 
-
+  datasource:
+    url: jdbc:mysql://172.24.7.29:3306/financial_cf_dev
+    username: root
+    password: JRTESTbai!@#123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy=org: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      #     更新或者创建数据表结构
+      ddl-auto: update
+    #    控制台显示SQL
+    show-sql: true
